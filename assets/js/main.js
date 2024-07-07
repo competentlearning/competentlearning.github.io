@@ -21,6 +21,45 @@
     }
   }
 
+  const texts = [
+    "Pusat Les Privat di seluruh indonesia",
+    "Pusat Bimbingan Belajar di seluruh Indonesia",
+    "Pusat Les Privat dan Bimbel semua Pelajaran",
+    "Pusat Les Privat dan Bimbel semua segmen",
+  ];
+  
+  let index = 0;
+  let charIndex = 0;
+  const typingElement = document.getElementById('typing');
+  const typingSpeed = 100;
+  const erasingSpeed = 50;
+  const delayBetweenTexts = 2000;
+  
+  function type() {
+      if (charIndex < texts[index].length) {
+          typingElement.textContent += texts[index].charAt(charIndex);
+          charIndex++;
+          setTimeout(type, typingSpeed);
+      } else {
+          setTimeout(erase, delayBetweenTexts);
+      }
+  }
+  
+  function erase() {
+      if (charIndex > 0) {
+          typingElement.textContent = texts[index].substring(0, charIndex - 1);
+          charIndex--;
+          setTimeout(erase, erasingSpeed);
+      } else {
+          index = (index + 1) % texts.length;
+          setTimeout(type, typingSpeed);
+      }
+  }
+  
+  document.addEventListener("DOMContentLoaded", function() {
+      setTimeout(type, delayBetweenTexts);
+  });
+
   /**
    * Easy event listener function
    */

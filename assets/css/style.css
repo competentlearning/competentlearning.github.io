@@ -377,6 +377,7 @@ h6 {
 #hero .hero-info {
   width: 50%;
   float: left;
+  height: 100%;
 }
 
 @media (max-width: 991px) {
@@ -396,9 +397,17 @@ h6 {
 
 #hero .hero-info h2 {
   color: #fff;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
   font-size: 48px;
   font-weight: 700;
+}
+
+#hero .hero-info h3 {
+  color: #88bfff;
+  margin-bottom: 40px;
+  font-size: 38px;
+  font-weight: 700;
+  /* text-decoration: underline; */
 }
 
 #hero .hero-info h2 span {
@@ -447,6 +456,10 @@ h6 {
   background: #007bff;
   border-color: #007bff;
   color: #fff;
+}
+
+.hero-type {
+  height: 150px;
 }
 
 /*--------------------------------------------------------------
@@ -551,40 +564,44 @@ section {
 
 /* About Us Section
 --------------------------------*/
-#about {
+#profil {
   background: #fff;
   padding: 60px 0;
 }
 
-#about .about-container .background {
+#profil .about-container .background {
   margin: 20px 0;
 }
 
-#about .about-container .content {
+#profil .about-container .content {
   background: #fff;
 }
 
-#about .about-container .title {
+#profil .about-container .title {
   color: #333;
   font-weight: 700;
   font-size: 32px;
 }
 
-#about .about-container p {
+#profil .about-container p {
   line-height: 26px;
 }
+.text-rapih {
+  text-indent: 50px;
+  text-align: justify; 
+}
 
-#about .about-container p:last-child {
+#profil .about-container p:last-child {
   margin-bottom: 0;
 }
 
-#about .about-container .icon-box {
+#profil .about-container .icon-box {
   background: #fff;
   background-size: cover;
   padding: 0 0 30px 0;
 }
 
-#about .about-container .icon-box .icon {
+#profil .about-container .icon-box .icon {
   float: left;
   background: #fff;
   width: 64px;
@@ -597,54 +614,54 @@ section {
   transition: all 0.3s ease-in-out;
 }
 
-#about .about-container .icon-box .icon i {
+#profil .about-container .icon-box .icon i {
   color: #007bff;
   font-size: 24px;
   line-height: 0;
 }
 
-#about .about-container .icon-box:hover .icon {
+#profil .about-container .icon-box:hover .icon {
   background: #007bff;
 }
 
-#about .about-container .icon-box:hover .icon i {
+#profil .about-container .icon-box:hover .icon i {
   color: #fff;
 }
 
-#about .about-container .icon-box .title {
+#profil .about-container .icon-box .title {
   margin-left: 80px;
   font-weight: 600;
   margin-bottom: 5px;
   font-size: 18px;
 }
 
-#about .about-container .icon-box .title a {
+#profil .about-container .icon-box .title a {
   color: #283d50;
 }
 
-#about .about-container .icon-box .description {
+#profil .about-container .icon-box .description {
   margin-left: 80px;
   line-height: 24px;
   font-size: 14px;
 }
 
-#about .about-extra {
+#profil .about-extra {
   padding-top: 60px;
 }
 
-#about .about-extra h4 {
+#profil .about-extra h4 {
   font-weight: 600;
   font-size: 24px;
 }
 
 /* Services Section
 --------------------------------*/
-#services {
+#program {
   padding: 60px 0 40px 0;
   box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
 }
 
-#services .box {
+#program .box {
   padding: 30px;
   position: relative;
   overflow: hidden;
@@ -655,38 +672,38 @@ section {
   transition: all 0.3s ease-in-out;
 }
 
-#services .box:hover {
+#program .box:hover {
   transform: translateY(-5px);
 }
 
-#services .icon {
+#program .icon {
   position: absolute;
   left: 15px;
   top: calc(50% - 32px);
 }
 
-#services .icon i {
+#program .icon i {
   font-size: 64px;
   line-height: 0;
   transition: 0.5s;
 }
 
-#services .title {
+#program .title {
   margin-left: 70px;
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 18px;
 }
 
-#services .title a {
+#program .title a {
   color: #111;
 }
 
-#services .box:hover .title a {
+#program .box:hover .title a {
   color: #007bff;
 }
 
-#services .description {
+#program .description {
   font-size: 14px;
   margin-left: 70px;
   line-height: 24px;
@@ -712,7 +729,8 @@ section {
   text-align: center;
   color: #fff;
   transition: 0.3s ease-in-out;
-  height: 100%;
+  margin-bottom: 30px;
+  height: 20vh;
 }
 
 @media (max-width: 991px) {
@@ -774,21 +792,25 @@ section {
   color: #cce5ff;
 }
 
+#why-us .carousel-inner {
+  height: 100%;
+}
+
 /* Portfolio Section
 --------------------------------*/
-#portfolio {
+#foto {
   padding: 60px 0;
   box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
 }
 
-#portfolio #portfolio-flters {
+#foto #portfolio-flters {
   padding: 0;
   margin: 5px 0 35px 0;
   list-style: none;
   text-align: center;
 }
 
-#portfolio #portfolio-flters li {
+#foto #portfolio-flters li {
   cursor: pointer;
   margin: 15px 15px 15px 0;
   display: inline-block;
@@ -803,35 +825,35 @@ section {
   transition: all 0.3s ease-in-out;
 }
 
-#portfolio #portfolio-flters li:hover,
-#portfolio #portfolio-flters li.filter-active {
+#foto #portfolio-flters li:hover,
+#foto #portfolio-flters li.filter-active {
   background: #007bff;
   color: #fff;
 }
 
-#portfolio #portfolio-flters li:last-child {
+#foto #portfolio-flters li:last-child {
   margin-right: 0;
 }
 
-#portfolio .portfolio-item {
+#foto .portfolio-item {
   position: relative;
   overflow: hidden;
   margin-bottom: 30px;
 }
 
-#portfolio .portfolio-item .portfolio-wrap {
+#foto .portfolio-item .portfolio-wrap {
   overflow: hidden;
   position: relative;
   border-radius: 6px;
   margin: 0;
 }
 
-#portfolio .portfolio-item .portfolio-wrap:hover img {
+#foto .portfolio-item .portfolio-wrap:hover img {
   opacity: 0.4;
   transition: 0.3s;
 }
 
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info {
+#foto .portfolio-item .portfolio-wrap .portfolio-info {
   position: absolute;
   top: 0;
   right: 0;
@@ -846,7 +868,7 @@ section {
   transition: 0.2s linear;
 }
 
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info h4 {
+#foto .portfolio-item .portfolio-wrap .portfolio-info h4 {
   font-size: 22px;
   line-height: 1px;
   font-weight: 700;
@@ -854,15 +876,15 @@ section {
   padding-bottom: 0;
 }
 
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info h4 a {
+#foto .portfolio-item .portfolio-wrap .portfolio-info h4 a {
   color: #fff;
 }
 
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info h4 a:hover {
+#foto .portfolio-item .portfolio-wrap .portfolio-info h4 a:hover {
   color: #007bff;
 }
 
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info p {
+#foto .portfolio-item .portfolio-wrap .portfolio-info p {
   padding: 0;
   margin: 0;
   color: #e2effe;
@@ -871,8 +893,8 @@ section {
   text-transform: uppercase;
 }
 
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info .link-preview,
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info .link-details {
+#foto .portfolio-item .portfolio-wrap .portfolio-info .link-preview,
+#foto .portfolio-item .portfolio-wrap .portfolio-info .link-details {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -884,28 +906,28 @@ section {
   margin: 10px 4px 0 4px;
 }
 
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info .link-preview i,
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info .link-details i {
+#foto .portfolio-item .portfolio-wrap .portfolio-info .link-preview i,
+#foto .portfolio-item .portfolio-wrap .portfolio-info .link-details i {
   font-size: 22px;
   color: #fff;
   line-height: 0;
 }
 
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info .link-preview:hover,
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info .link-details:hover {
+#foto .portfolio-item .portfolio-wrap .portfolio-info .link-preview:hover,
+#foto .portfolio-item .portfolio-wrap .portfolio-info .link-details:hover {
   background: #3395ff;
 }
 
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info .link-preview:hover i,
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info .link-details:hover i {
+#foto .portfolio-item .portfolio-wrap .portfolio-info .link-preview:hover i,
+#foto .portfolio-item .portfolio-wrap .portfolio-info .link-details:hover i {
   color: #fff;
 }
 
-#portfolio .portfolio-item .portfolio-wrap:hover {
+#foto .portfolio-item .portfolio-wrap:hover {
   background: #003166;
 }
 
-#portfolio .portfolio-item .portfolio-wrap:hover .portfolio-info {
+#foto .portfolio-item .portfolio-wrap:hover .portfolio-info {
   opacity: 1;
 }
 
@@ -1478,4 +1500,26 @@ section {
 
 #footer .credits a:hover {
   color: #f1f7ff;
+}
+
+/* baru */
+
+.link-putih {
+  color: white;
+  text-decoration: underline;
+}
+
+.btn-outline-primary {
+  border: 1px solid #007bff;
+  color: #007bff;
+  background-color: transparent;
+  padding: 10px 20px;
+  border-radius: 50px;
+  display: inline-block;
+  margin: 5px;
+  text-decoration: none;
+}
+.btn-kota {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
 }
