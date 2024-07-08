@@ -803,14 +803,14 @@ section {
   box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
 }
 
-#foto #portfolio-flters {
+#foto #foto-filters {
   padding: 0;
   margin: 5px 0 35px 0;
   list-style: none;
   text-align: center;
 }
 
-#foto #portfolio-flters li {
+#foto #foto-filters li {
   cursor: pointer;
   margin: 15px 15px 15px 0;
   display: inline-block;
@@ -825,13 +825,13 @@ section {
   transition: all 0.3s ease-in-out;
 }
 
-#foto #portfolio-flters li:hover,
-#foto #portfolio-flters li.filter-active {
+#foto #foto-filters li:hover,
+#foto #foto-filters li.filter-active {
   background: #007bff;
   color: #fff;
 }
 
-#foto #portfolio-flters li:last-child {
+#foto #foto-filters li:last-child {
   margin-right: 0;
 }
 
@@ -839,6 +839,10 @@ section {
   position: relative;
   overflow: hidden;
   margin-bottom: 30px;
+}
+
+#foto .portfolio-container {
+  height: 100%;
 }
 
 #foto .portfolio-item .portfolio-wrap {
