@@ -7,7 +7,7 @@ $(document).ready(function() {
         var cityList = $("#list-kot");
         cityList.empty();
         if (filteredCities.length === 0) {
-            cityList.append('<small><div class="alert alert-info" role="alert">Mohon maaf Kab/Kota anda belum terjangkau!</div></small>');
+            // cityList.append('<small><div class="alert alert-info" role="alert">Mohon maaf Kab/Kota anda belum terjangkau!</div></small>');
         } else {
             filteredCities.forEach(function(city) {
                 cityList.append('<a class="btn btn-outline-primary super-small-button" disabled>' + city + '</a>');
@@ -26,108 +26,40 @@ $(document).ready(function() {
     // Display all cities on initial load
     displayCities(cities);
 
-    var itemsPerPage = 5;
+    // var itemsPerPage = 5;
 
-    var foto_bimble = [
-      "IMG-20201118-WA0032.jpg","IMG20210308084007.jpg","IMG20210308084049.jpg","IMG20210820111940.jpg","IMG20210820112022.jpg","IMG20211026083048.jpg","IMG20220306084936.jpg","IMG20220320081606.jpg","IMG20220626085332.jpg","IMG20220702092737.jpg","IMG20240704162606.jpg","IMG20240705141324.jpg","IMG20240705141347.jpg","IMG20240705141358.jpg","IMG20240705141415.jpg","IMG20240705141427.jpg","IMG20240705141433.jpg","IMG20240705141452.jpg","IMG20240705153628.jpg"
-    ];
+    // var foto_bimble = [
+    //   "IMG-20201118-WA0032.jpg","IMG20210308084007.jpg","IMG20210308084049.jpg","IMG20210820111940.jpg","IMG20210820112022.jpg","IMG20211026083048.jpg","IMG20220306084936.jpg","IMG20220320081606.jpg","IMG20220626085332.jpg","IMG20220702092737.jpg","IMG20240704162606.jpg","IMG20240705141324.jpg","IMG20240705141347.jpg","IMG20240705141358.jpg","IMG20240705141415.jpg","IMG20240705141427.jpg","IMG20240705141433.jpg","IMG20240705141452.jpg","IMG20240705153628.jpg"
+    // ,
+    //     "IMG20240705153655.jpg",
+    //     "IMG20240705153721.jpg",
+    //     "IMG20240705153746.jpg",
+    //     "IMG20240705153816.jpg",
+    //     "IMG20240705153833.jpg",
+    //     "IMG20240705154813.jpg",
+    //     "IMG20240705163517.jpg",
+    //     "IMG20240705163557.jpg",
+    //     "IMG20240705163639.jpg",
+    //     "IMG20240705163723.jpg",
+    //     "IMG_20220626_150430.jpg",
+    //     "IMG_20220626_150504.jpg",
+    //     "IMG_20220626_150515.jpg",
+    //     "IMG_20220626_150530.jpg",
+    //     "IMG_20220706_063927.jpg",
+    //     "IMG_20220706_063952.jpg",
+    //     "IMG_20220706_064018.jpg",
+    //     "IMG_20220706_064032.jpg",
+    //     "IMG_20220706_064050.jpg",
+    //     "IMG_20220706_064113.jpg",
+    //     "IMG_20220706_064134.jpg",
+    //     "IMG_20220706_064551.jpg",
+    //     "IMG_20220706_064612.jpg",
+    //     "IMG_20220706_064642.jpg",
+    // ];
 
-    var foto_private = [
-        "IMG20240705153655.jpg",
-        "IMG20240705153721.jpg",
-        "IMG20240705153746.jpg",
-        "IMG20240705153816.jpg",
-        "IMG20240705153833.jpg",
-        "IMG20240705154813.jpg",
-        "IMG20240705163517.jpg",
-        "IMG20240705163557.jpg",
-        "IMG20240705163639.jpg",
-        "IMG20240705163723.jpg",
-        "IMG_20220626_150430.jpg",
-        "IMG_20220626_150504.jpg",
-        "IMG_20220626_150515.jpg",
-        "IMG_20220626_150530.jpg",
-        "IMG_20220706_063927.jpg",
-        "IMG_20220706_063952.jpg",
-        "IMG_20220706_064018.jpg",
-        "IMG_20220706_064032.jpg",
-        "IMG_20220706_064050.jpg",
-        "IMG_20220706_064113.jpg",
-        "IMG_20220706_064134.jpg",
-        "IMG_20220706_064551.jpg",
-        "IMG_20220706_064612.jpg",
-        "IMG_20220706_064642.jpg",
-    ];
-
-    var all_photos = foto_bimble.concat(foto_private);
-
-    function renderPhotos(photos, container) {
-      container.empty();
-      var toShow = photos.slice(0, itemsPerPage);
-      toShow.forEach(function(photo) {
-        var photoHTML = `
-          <div class="col-lg-4 col-md-6 portfolio-item">
-            <div class="portfolio-wrap">
-              <img src="assets/img/foto/${photo}" class="img-fluid" alt="">
-            </div>
-          </div>
-        `;
-        container.append(photoHTML);
-      });
-    }
-
-    function handleFilter(filter) {
-      var photos;
-      if (filter === '*') {
-        photos = all_photos;
-      } else if (filter === 'bimble') {
-        photos = foto_bimble;
-      } else if (filter === 'private') {
-        photos = foto_private;
-      }
-      renderPhotos(photos, $('.list-foto'));
-    }
-
-    // Initialize with all photos
-    handleFilter('*');
-
-    $('#foto-filters li').on('click', function() {
-      $('#foto-filters li').removeClass('filter-active');
-      $(this).addClass('filter-active');
-
-      var filterValue = $(this).attr('data-filter');
-      handleFilter(filterValue);
-      $('#see-more').show();
-    });
-
-    $('#see-more').on('click', function() {
-      var filterValue = $('#foto-filters .filter-active').attr('data-filter');
-      var photos;
-      if (filterValue === '*') {
-        photos = all_photos;
-      } else if (filterValue === 'bimble') {
-        photos = foto_bimble;
-      } else if (filterValue === 'private') {
-        photos = foto_private;
-      }
-
-      var currentItems = $('.portfolio-item').length;
-      var nextItems = photos.slice(currentItems, currentItems + itemsPerPage);
-      nextItems.forEach(function(photo) {
-        var photoHTML = `
-          <div class="col-lg-4 col-md-6 portfolio-item">
-            <div class="portfolio-wrap">
-              <img src="assets/img/foto/${photo}" class="img-fluid" alt="">
-            </div>
-          </div>
-        `;
-        $('.list-foto').append(photoHTML);
-      });
-
-      if (currentItems + nextItems.length >= photos.length) {
-        $('#see-more').hide();
-      }
-    });
+    // foto_bimble.forEach((item)=>{
+    //     console.log(`<div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/${item}"><img src="assets/img/foto/${item}" class="img-fluid" alt=""></a></div>`)
+    // });
 
     const lesData = {
         "paud": { name: "PAUD/TK", price: 80000 },
@@ -200,4 +132,50 @@ $(document).ready(function() {
           }
         }
       });
+
+      
+
+    //   console.log($('#foto-swiper').html(`<div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG-20201118-WA0032.jpg"><img src="assets/img/foto/IMG-20201118-WA0032.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG20210308084007.jpg"><img src="assets/img/foto/IMG20210308084007.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG20210308084049.jpg"><img src="assets/img/foto/IMG20210308084049.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG20210820111940.jpg"><img src="assets/img/foto/IMG20210820111940.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG20210820112022.jpg"><img src="assets/img/foto/IMG20210820112022.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG20211026083048.jpg"><img src="assets/img/foto/IMG20211026083048.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG20220306084936.jpg"><img src="assets/img/foto/IMG20220306084936.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG20220320081606.jpg"><img src="assets/img/foto/IMG20220320081606.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG20220626085332.jpg"><img src="assets/img/foto/IMG20220626085332.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG20220702092737.jpg"><img src="assets/img/foto/IMG20220702092737.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG20240704162606.jpg"><img src="assets/img/foto/IMG20240704162606.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG20240705141324.jpg"><img src="assets/img/foto/IMG20240705141324.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG20240705141347.jpg"><img src="assets/img/foto/IMG20240705141347.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG20240705141358.jpg"><img src="assets/img/foto/IMG20240705141358.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG20240705141415.jpg"><img src="assets/img/foto/IMG20240705141415.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG20240705141427.jpg"><img src="assets/img/foto/IMG20240705141427.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG20240705141433.jpg"><img src="assets/img/foto/IMG20240705141433.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG20240705141452.jpg"><img src="assets/img/foto/IMG20240705141452.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG20240705153628.jpg"><img src="assets/img/foto/IMG20240705153628.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG20240705153655.jpg"><img src="assets/img/foto/IMG20240705153655.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG20240705153721.jpg"><img src="assets/img/foto/IMG20240705153721.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG20240705153746.jpg"><img src="assets/img/foto/IMG20240705153746.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG20240705153816.jpg"><img src="assets/img/foto/IMG20240705153816.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG20240705153833.jpg"><img src="assets/img/foto/IMG20240705153833.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG20240705154813.jpg"><img src="assets/img/foto/IMG20240705154813.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG20240705163517.jpg"><img src="assets/img/foto/IMG20240705163517.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG20240705163557.jpg"><img src="assets/img/foto/IMG20240705163557.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG20240705163639.jpg"><img src="assets/img/foto/IMG20240705163639.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG20240705163723.jpg"><img src="assets/img/foto/IMG20240705163723.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG_20220626_150430.jpg"><img src="assets/img/foto/IMG_20220626_150430.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG_20220626_150504.jpg"><img src="assets/img/foto/IMG_20220626_150504.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG_20220626_150515.jpg"><img src="assets/img/foto/IMG_20220626_150515.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG_20220626_150530.jpg"><img src="assets/img/foto/IMG_20220626_150530.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG_20220706_063927.jpg"><img src="assets/img/foto/IMG_20220706_063927.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG_20220706_063952.jpg"><img src="assets/img/foto/IMG_20220706_063952.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG_20220706_064018.jpg"><img src="assets/img/foto/IMG_20220706_064018.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG_20220706_064032.jpg"><img src="assets/img/foto/IMG_20220706_064032.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG_20220706_064050.jpg"><img src="assets/img/foto/IMG_20220706_064050.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG_20220706_064113.jpg"><img src="assets/img/foto/IMG_20220706_064113.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG_20220706_064134.jpg"><img src="assets/img/foto/IMG_20220706_064134.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG_20220706_064551.jpg"><img src="assets/img/foto/IMG_20220706_064551.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG_20220706_064612.jpg"><img src="assets/img/foto/IMG_20220706_064612.jpg" class="img-fluid" alt=""></a></div>
+    //           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto/IMG_20220706_064642.jpg"><img src="assets/img/foto/IMG_20220706_064642.jpg" class="img-fluid" alt=""></a></div>`));
 });

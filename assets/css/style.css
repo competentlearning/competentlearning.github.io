@@ -1005,7 +1005,17 @@ section {
 #testimonials {
   padding: 60px 0;
   box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+  background: #00428a;
+  color: #ffffff;
 }
+
+#testimonials h1 h2 h3 h4{
+  padding: 60px 0;
+  box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+  background: #00428a;
+  color: #ffffff;
+}
+
 
 #testimonials .section-header {
   margin-bottom: 40px;
@@ -1040,13 +1050,13 @@ section {
   font-size: 20px;
   font-weight: bold;
   margin: 10px 0 5px 0;
-  color: #111;
+  color: #ffffff;
   margin-left: 140px;
 }
 
 #testimonials .testimonial-item h4 {
   font-size: 14px;
-  color: #999;
+  color: #cccaca;
   margin: 0 0 15px 0;
   margin-left: 140px;
 }
@@ -1544,4 +1554,144 @@ section {
 
 .super-small-button:active {
   background-color: #007bff;
+}
+
+.contact-method {
+  display: inline-block;
+  width: 30%;
+  margin: 10px;
+  padding: 20px;
+  background-color: #0056b3;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.contact-method a {
+  color: #0026ff;
+  text-decoration: none;
+  display: block;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+.contact-method a:hover {
+  background-color: #0056b3;
+}
+.contact-method p {
+  margin: 0;
+  padding: 5px 0;
+}
+.address, .social-media {
+  margin-top: 20px;
+}
+.social-media img {
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+}
+
+
+.card-img-top {
+  width: 200px;
+}
+
+/*--------------------------------------------------------------
+# Gallery Section
+--------------------------------------------------------------*/
+.gallery {
+  overflow: hidden;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.gallery .swiper-wrapper {
+  height: auto;
+}
+
+.gallery .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.gallery .swiper-pagination .swiper-pagination-bullet {
+  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+  border: 0;
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+}
+
+.gallery .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: rgb(0, 76, 255);
+  opacity: 1;
+}
+
+.gallery .swiper-slide-active {
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .gallery .swiper-wrapper {
+    padding: 40px 0;
+  }
+
+  .gallery .swiper-slide-active {
+    background: var(--background-color);
+    border: 6px solid rgb(0, 76, 255);
+    padding: 4px;
+    z-index: 1;
+    transform: scale(1.2);
+    transition: none;
+  }
+}
+
+.cards-whyus {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.card-whyus {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1 1 300px;
+  max-width: 300px;
+  text-align: left;
+  font-size: small;
+}
+.card-whyus:nth-child(1) { background-color: #d0e4fe; }
+.card-whyus:nth-child(2) { background-color: #fef5d0; }
+.card-whyus:nth-child(3) { background-color: #fed0d0; }
+.card-whyus:nth-child(4) { background-color: #f5fed0; }
+.card-whyus:nth-child(5) { background-color: #d0fefe; }
+.card-whyus:nth-child(6) { background-color: #d0fedd; }
+.card-whyus:nth-child(7) { background-color: #d0f0fe; }
+.card-whyus:nth-child(8) { background-color: #ffe2d0; }
+.card-whyus:nth-child(7) { background-color: #FDFD96; }
+.card-whyus:nth-child(8) { background-color: #FFB347; }
+.card-whyus:nth-child(9) { background-color: #F49AC2; }
+.card-whyus:nth-child(10) { background-color: #CB99C9; }
+.card-whyus:nth-child(11) { background-color: #FFD1DC; }
+.card-whyus:nth-child(12) { background-color: #CFCFC4; }
+.card-whyus:nth-child(13) { background-color: #FFB347; }
+.card-whyus:nth-child(14) { background-color: #FFDAC1; }
+.card-whyus:nth-child(15) { background-color: #E6A8D7; }
+.card-whyus:nth-child(16) { background-color: #779ECB; }
+.card-whyus:nth-child(17) { background-color: #03C03C; }
+.card-whyus:nth-child(18) { background-color: #B19CD9; }
+.card-whyus:nth-child(19) { background-color: #DEA5A4; }
+.card-whyus:nth-child(20) { background-color: #AEC6CF; }
+
+.gallery-image {
+  width: 100%;
+  height: 300px; /* Set the desired height */
+  object-fit: cover;
+}
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
