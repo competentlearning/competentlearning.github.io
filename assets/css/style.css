@@ -1558,14 +1558,28 @@ section {
 
 .contact-method {
   display: inline-block;
-  width: 30%;
-  margin: 10px;
+  width: 90%;
+  margin: 5%;
   padding: 20px;
   background-color: #0056b3;
   color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
+
+@media (min-width: 992px) {
+  .contact-method {
+    display: inline-block;
+    width: 30%;
+    margin: 1.5%;
+    padding: 20px;
+    background-color: #0056b3;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+}
+
 .contact-method a {
   color: #0026ff;
   text-decoration: none;
