@@ -94,6 +94,10 @@ h6 {
   height: 60px;
 }
 
+.logo img{
+  margin-top: 15px;
+}
+
 #header .logo h1 {
   font-size: 36px;
   margin: 0;
