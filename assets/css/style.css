@@ -86,12 +86,24 @@ h6 {
   height: 80px;
   z-index: 997;
   transition: all 0.5s;
-  background: #fff;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
+  background: transparent;
 }
 
 #header.header-scrolled {
   height: 60px;
+  background: white;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
+}
+
+#header 
+.btn-wa {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 100px;
+  font-size: small;
 }
 
 .logo img{
@@ -154,7 +166,7 @@ h6 {
   padding: 10px 0 10px 30px;
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
-  color: #004289;
+  color: #007bff;
   font-weight: 500;
   white-space: nowrap;
   transition: 0.3s;
@@ -348,7 +360,7 @@ h6 {
 #hero {
   width: 100%;
   position: relative;
-  background: url("../img/hero-bg.png") center bottom no-repeat;
+  background: url("../img/hero-bg.png") center top no-repeat;
   background-size: cover;
   padding: 200px 0 120px 0;
 }
@@ -1669,6 +1681,7 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  color: #000dff;
 }
 .card-whyus {
   background-color: white;
@@ -1677,31 +1690,27 @@ section {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   flex: 1 1 300px;
   max-width: 300px;
-  text-align: left;
+  text-align: center;
   font-size: small;
 }
-.card-whyus:nth-child(1) { background-color: #d0e4fe; }
-.card-whyus:nth-child(2) { background-color: #fef5d0; }
-.card-whyus:nth-child(3) { background-color: #fed0d0; }
-.card-whyus:nth-child(4) { background-color: #f5fed0; }
-.card-whyus:nth-child(5) { background-color: #d0fefe; }
-.card-whyus:nth-child(6) { background-color: #d0fedd; }
-.card-whyus:nth-child(7) { background-color: #d0f0fe; }
-.card-whyus:nth-child(8) { background-color: #ffe2d0; }
-.card-whyus:nth-child(7) { background-color: #FDFD96; }
-.card-whyus:nth-child(8) { background-color: #FFB347; }
-.card-whyus:nth-child(9) { background-color: #F49AC2; }
-.card-whyus:nth-child(10) { background-color: #CB99C9; }
-.card-whyus:nth-child(11) { background-color: #FFD1DC; }
-.card-whyus:nth-child(12) { background-color: #CFCFC4; }
-.card-whyus:nth-child(13) { background-color: #FFB347; }
-.card-whyus:nth-child(14) { background-color: #FFDAC1; }
-.card-whyus:nth-child(15) { background-color: #E6A8D7; }
-.card-whyus:nth-child(16) { background-color: #779ECB; }
-.card-whyus:nth-child(17) { background-color: #03C03C; }
-.card-whyus:nth-child(18) { background-color: #B19CD9; }
-.card-whyus:nth-child(19) { background-color: #DEA5A4; }
-.card-whyus:nth-child(20) { background-color: #AEC6CF; }
+.card-whyus:nth-child(1) { background-color: #00aaff; }
+.card-whyus:nth-child(2) { background-color: #33bbff; }
+.card-whyus:nth-child(3) { background-color: #66ccff; }
+.card-whyus:nth-child(4) { background-color: #99ddff; }
+.card-whyus:nth-child(5) { background-color: #cceeff; }
+.card-whyus:nth-child(6) { background-color: #e5f7ff; }
+.card-whyus:nth-child(7) { background-color: #b3e4ff; }
+.card-whyus:nth-child(8) { background-color: #80d1ff; }
+.card-whyus:nth-child(9) { background-color: #4dbdff; }
+.card-whyus:nth-child(10) { background-color: #1aaaff; }
+.card-whyus:nth-child(11) { background-color: #d6f2ff; }
+.card-whyus:nth-child(12) { background-color: #f0f9ff; }
+.card-whyus:nth-child(13) { background-color: #99d8ff; }
+.card-whyus:nth-child(14) { background-color: #73c9ff; }
+.card-whyus:nth-child(15) { background-color: #4dbeff; }
+.card-whyus:nth-child(16) { background-color: #e0f5ff; }
+
+
 
 .gallery-image {
   width: 100%;
@@ -1712,4 +1721,29 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* pendaftaran */
+#daftar .process-step {
+  text-align: center;
+  padding: 20px;
+}
+#daftar .process-step .fa-stack {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+#daftar .btn-sms {
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+}
+
+#daftar .btn-wa {
+  background-color: #00cc00;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
 }
