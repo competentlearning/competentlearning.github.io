@@ -1803,6 +1803,14 @@ section {
 }
 
 
+@media (max-width: 992px) {
+  #daftar .process-step {
+    min-width: 100%; /* Adjust this value to fit your design */
+    max-width: 100%; /* Adjust this value to fit your design */
+  }
+}
+
+
 h3 {
   font-size: 32px;
 }
