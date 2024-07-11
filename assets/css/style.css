@@ -970,7 +970,7 @@ section {
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background-color: #fff;
+  background-color: #992b2b;
   opacity: 1;
   border: 1px solid #007bff;
 }
@@ -1645,7 +1645,7 @@ section {
 }
 
 .gallery .swiper-pagination .swiper-pagination-bullet {
-  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+  background-color: rgb(117, 156, 239);
   border: 0;
   width: 12px;
   height: 12px;
@@ -1653,7 +1653,7 @@ section {
 }
 
 .gallery .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: rgb(0, 76, 255);
+  background-color: rgb(0, 55, 255);
   opacity: 1;
 }
 
