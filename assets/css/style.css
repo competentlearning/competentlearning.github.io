@@ -543,8 +543,8 @@ h6 {
 }
 
 #hero .hero-info .btn-get-started {
-  background: #004a99;
-  border: 2px solid #004a99;
+  background: #ffffff;
+  border: 2px solid #000000;
   color: #fff;
 }
 
@@ -561,9 +561,9 @@ h6 {
 }
 
 #hero .hero-info .btn-services:hover {
-  background: #004a99;
-  border-color: #004a99;
-  color: #fff;
+  background: #ffffff;
+  border: 2px solid #ffffff;
+  color: #000000;
 }
 
 .hero-type {
