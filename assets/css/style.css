@@ -391,14 +391,14 @@ h6 {
   }
 }
 
-#hero .overlay {
+/* #hero .overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background-color: rgba(0, 123, 255, 0.7);
-}
+} */
 
 #hero .hero-img {
   width: 50%;
@@ -443,7 +443,7 @@ h6 {
   /* margin-bottom: 40px; */
   font-size: 48px;
   font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 12px 12px 24px rgba(0, 0, 0, 0.5);
 }
 
 #hero .hero-info h3 {
