@@ -444,28 +444,40 @@ h6 {
   /* margin-bottom: 40px; */
   font-size: 48px;
   font-weight: 700;
-  text-shadow: 12px 12px 24px rgba(0, 0, 0, 0.5);
+  text-shadow: 12px 12px 24px rgba(0, 0, 0, 1);
 }
 
 #hero .hero-info h3 {
   color: #ffffff;
   margin-bottom: 40px;
-  font-size: 38px;
+  font-size: 30px;
   font-weight: 700;
   
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
 }
 
 #hero .hero-info h2 span {
-  color: #74b5fc;
+  color: #ffffff;
   text-decoration: underline;
 }
 
+#hero .garis {
+  color: white;
+  font-size: larger;
+}
+
 @media (max-width: 767px) {
+  #hero .hero-info h3 {
+    font-size: 25px;
+  }
   #hero .hero-info h2 {
     font-size: 34px;
     margin-bottom: 30px;
   }
+  #hero .garis {
+    display: none;
+  }
+  
 }
 
 #hero .hero-info .btn-get-started,
