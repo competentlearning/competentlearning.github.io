@@ -429,7 +429,7 @@ h6 {
 @media (max-width: 991px) {
   #hero {
     padding: 140px 0 60px 0;
-    background: url("../img/hero-bg-2.png") left top no-repeat;
+    background: url("../img/hero-bg.png") left top no-repeat;
   }
 }
 
