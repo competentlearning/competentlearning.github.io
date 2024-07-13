@@ -137,10 +137,6 @@ $(document).ready(function() {
         }
       });
 
-      if (window.scrollY > 100) {
-        console.log($('#wa-header'));
-      }
-
       // $(window).on('scroll', function() {
       //   var scrollPosition = $(this).scrollTop();
       //   console.log('Scroll Y:', scrollPosition);
