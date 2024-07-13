@@ -33,7 +33,7 @@
   const typingElement = document.getElementById('typing');
   const typingSpeed = 100;
   const erasingSpeed = 50;
-  const delayBetweenTexts = 2000;
+  const delayBetweenTexts = 300;
   
   function type() {
       if (charIndex < texts[index].length) {

@@ -10,7 +10,7 @@ $(document).ready(function() {
             // cityList.append('<small><div class="alert alert-info" role="alert">Mohon maaf Kab/Kota anda belum terjangkau!</div></small>');
         } else {
             filteredCities.forEach(function(city) {
-                cityList.append('<a class="btn btn-outline-primary super-small-button" disabled>' + city + '</a>');
+                cityList.append('<a class="btn btn-outline-primary super-small-button" href="#program">' + city + '</a>');
             });
         }
     }
