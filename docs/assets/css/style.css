@@ -486,7 +486,7 @@ h6 {
   }
 }
 
-#hero .hero-info h2 {
+#hero .hero-info h1 {
   color: #ffffff;
   /* margin-bottom: 40px; */
   font-size: 48px;
@@ -494,7 +494,7 @@ h6 {
   text-shadow: 12px 12px 24px rgba(0, 0, 0, 1);
 }
 
-#hero .hero-info h3 {
+#hero .hero-info h2 {
   color: #ffffff;
   margin-bottom: 40px;
   font-size: 30px;
@@ -503,7 +503,7 @@ h6 {
   text-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
 }
 
-#hero .hero-info h2 span {
+#hero .hero-info h1 span {
   color: #ffffff;
   text-decoration: underline;
 }
@@ -514,10 +514,10 @@ h6 {
 }
 
 @media (max-width: 767px) {
-  #hero .hero-info h3 {
+  #hero .hero-info h2 {
     font-size: 25px;
   }
-  #hero .hero-info h2 {
+  #hero .hero-info h1 {
     font-size: 34px;
     margin-bottom: 30px;
   }
